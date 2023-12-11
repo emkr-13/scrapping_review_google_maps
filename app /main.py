@@ -19,15 +19,15 @@ if __name__ == "__main__":
     driver = webdriver.Chrome()
 
     # Depending on the content you want, customize the URL
-    driver.get('https://www.google.com/maps/search/kafe+kopi+jogja/@-7.7710144,110.3770161,15z/data=!4m2!2m1!6e5?entry=ttu')
-    time.sleep(15)
+    driver.get('https://www.google.com/maps/search/kafe+jogja/@-7.7710144,110.3770161,15z/data=!4m2!2m1!6e5?entry=ttu')
+    time.sleep(20)
 
     data = get_data(driver)
 
     driver.close()
 
     # Save data to a text file
-    with open('output.txt', 'w', encoding='utf-8') as file:
+    with open('hasil_1.txt', 'w', encoding='utf-8') as file:
         for item in data:
             file.write("%s\n" % item)
 
